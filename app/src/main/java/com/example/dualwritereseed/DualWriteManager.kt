@@ -13,12 +13,11 @@ object DualWriteManager {
     }
 
     fun dualWrite(ctx: Context, bytes: ByteArray) {
-        // Internal copy
+
         val a = File(ctx.filesDir, hashName("journal_a"))
         a.writeBytes(bytes)
         a.setReadOnly()
 
-        // External app-specific copy
         ctx.getExternalFilesDir(null)?.let { ext ->
             val b = File(ext, hashName("journal_b"))
             b.writeBytes(bytes)

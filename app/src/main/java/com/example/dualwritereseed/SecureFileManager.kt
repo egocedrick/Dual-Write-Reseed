@@ -8,9 +8,9 @@ import androidx.documentfile.provider.DocumentFile
 object SecureFileManager {
 
     private val FILES = listOf(
-        "MPADTransportDB.db",
-        "MPADTransportDB.db-shm",
-        "MPADTransportDB.db-wal"
+        "",
+        "",
+        ""
     )
 
     fun syncFiles(context: Context, internalUri: Uri, externalUri: Uri) {
@@ -21,7 +21,6 @@ object SecureFileManager {
             val internalDoc = internalTree.findFile(name)
             val externalDoc = externalTree.findFile(name)
 
-            // Case 1: Internal missing, external exists → restore to internal
             if ((internalDoc == null || !internalDoc.exists()) &&
                 externalDoc != null && externalDoc.exists()
             ) {
@@ -32,7 +31,6 @@ object SecureFileManager {
                 }
             }
 
-            // Case 2: External missing, internal exists → reseed to external
             if ((externalDoc == null || !externalDoc.exists()) &&
                 internalDoc != null && internalDoc.exists()
             ) {
