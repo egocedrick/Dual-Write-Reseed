@@ -24,6 +24,16 @@ A Kotlin-based Android utility that synchronizes files between internal and exte
   - Internal and external storage handling
   - Synchronization logic
 
+## Features
+- Configure file location in internal storage.
+- Configure file location in external storage.
+- Synchronize data between internal and external storage.
+
+## Impact
+- Ensures redundancy by cloning data across storage locations.
+- Preserves client data against accidental or intentional deletion.
+- Adds layered security for critical files.
+
 ## Project Structure
 - `/ui` – User interface for selecting storage paths and triggering sync
 - `/logic` – Synchronization engine (file comparison and copy operations)
