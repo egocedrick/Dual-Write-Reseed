@@ -45,6 +45,16 @@ A Kotlin-based Android utility that synchronizes files between internal and exte
 3. Tap **Sync** to initiate synchronization.
 4. Files will be mirrored across both storage locations.
 
+## Security Methodology
+
+This app is a direct product of the 
+**[BBS Framework](https://github.com/egocedrick/BBS-Framework)** 
+— specifically the **Secure** phase.
+
+It was built as a response to a real Safe Mode vulnerability 
+discovered in production not as a theory, but as a fix 
+for something that actually broke.
+
 ## Notes
 - This project is part of my mobile security simulation portfolio.
 - Designed as a **data integrity layer** to complement Application Lock.
