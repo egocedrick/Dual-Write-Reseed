@@ -47,8 +47,6 @@ A Kotlin-based Android utility that synchronizes files between internal and exte
 
 ## Security Methodology
 
-## Security Methodology
-
 This app is a direct product of the 
 **[BBS Framework](https://github.com/egocedrick/BBS-Framework)** 
 — specifically the **Secure** phase.
